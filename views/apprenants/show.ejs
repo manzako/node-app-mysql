@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= apprenant.prenom  %></title>
-</head>
-
-<body>
-    <a href="/apprenants">&lt;-Retourner à liste</a>
-    <h1><%= apprenant.prenom+" "+apprenant.nom %> </h1>
-    <p>Nom : <%= apprenant.nom %></p>
-    <p>Prenom : <%= apprenant.prenom %></p>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= apprenant.prenom %></title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="bg-info">
+    <div class="row">
+      <div
+        class="col-md-6 offset-md-3"
+        style="background-color: #fff; margin-top:25px; padding:20px;"
+      >
+        <h3>
+          <a class="btn btn-secondary" href="/apprenants"
+            ><i class="fa fa-arrow-circle-left"></i></a
+          >
+        </h3>
+        <h1 style="text-align: center;">
+          <%= apprenant.prenom+" "+apprenant.nom %>
+        </h1>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Prenom</th>
+              <th>Nom</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= apprenant.prenom %></td>
+              <td><%= apprenant.nom %></td>
+              <td>
+                <a href=""
+                  ><i class="fa fa-pencil fa-lg" aria-hidden="true"></i
+                ></a>
+                <a href=""
+                  ><i class="fa fa-trash fa-lg" aria-hidden="true"></i
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
 </html>

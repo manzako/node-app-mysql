@@ -3,8 +3,9 @@
     "start": "nodemon app.js"
   },
   "dependencies": {
-    "mysql": "*",
+    "ejs": "*",
     "express": "*",
-    "ejs": "*"
+    "mysql": "*",
+    "nodemon": "^2.0.3"
   }
 }

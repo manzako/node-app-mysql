@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="bg-info">
+    <div class="row">
+      <div
+        class="col-md-6 offset-md-3"
+        style="background-color: #fff; margin-top:25px; padding:20px;"
+      >
+        <h3>
+          <a class="btn btn-secondary" href="/new"
+            ><i class="fa fa-plus"></i> Nouvel</a
+          >
+        </h3>
+        <h1 style="text-align: center;">Liste Des Apprenants</h1>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Prenom</th>
+              <th>Nom</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let apprenant of apprenants) {%>
+            <tr>
+              <td><%= apprenant.prenom %></td>
+              <td><%= apprenant.nom %></td>
+              <td>
+                <a href="/modify/<%= apprenant.id %>"
+                  ><i class="fa fa-pencil fa-lg" aria-hidden="true"></i
+                ></a>
+                <a href="/delete/<%= apprenant.id %>"
+                  ><i class="fa fa-trash fa-lg" aria-hidden="true"></i
+                ></a>
+                <a href="/apprenants/<%= apprenant.id %>"
+                  ><i class="fa fa-eye" aria-hidden="true"></i
+                ></a>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
 
-<body>
-    <h1>Liste des apprenants</h1>
-    <ul>
+  <body>
+    <!-- <ul>
         <% for(let apprenant of apprenants) {%>
         <li><%= apprenant.nom %> <%= apprenant.prenom %> <a href="/apprenants/<%= apprenant.id %>">Voir détails</a></li>
         <% } %>
     </ul>
-    <p><a href="/apprenants/new">Ajouter un nouvel apprenant</a></p>
-</body>
-
+    <p><a href="/apprenants/new">Ajouter un nouvel apprenant</a></p> -->
+  </body>
 </html>
